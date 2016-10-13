@@ -1,0 +1,5 @@
+Alice_Boston_50
+Mike_NY_50
+Bob_Washington_99
+Charley_NY_200
+David_Boston_150

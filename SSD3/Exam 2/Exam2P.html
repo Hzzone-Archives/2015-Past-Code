@@ -1,0 +1,254 @@
+<html>
+<head>
+<link rel=stylesheet href="/css/cteform.css" type="text/css">
+<title>SSD3 Exam 2 Practical</title>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"><META HTTP-EQUIV="Expires" CONTENT="-1"><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><script language="JavaScript" src="/js/cteform.js"></script>
+<script language="JavaScript" src="/js/ctecoursespt.js"></script>
+<script language="JavaScript1.2">
+CTEUtils_ImgDirURL = "/img";
+CTEUtils_CssDirURL = "/css";
+CTEUtils_JsDirURL = "/js";
+</script>
+<script language="JavaScript1.2" src="/js/ctesortable.js"></script><script language="JavaScript">var filelisting_6586114_tbl_info = new Array();
+filelisting_6586114_tbl_info[1] = new Array();
+filelisting_6586114_tbl_info[1]["name"] = "Size";
+filelisting_6586114_tbl_info[1]["type"] = "number";
+filelisting_6586114_tbl_info[2] = new Array();
+filelisting_6586114_tbl_info[2]["name"] = "Status";
+filelisting_6586114_tbl_info[2]["type"] = "string";
+filelisting_6586114_tbl_info[3] = new Array();
+filelisting_6586114_tbl_info[3]["name"] = "File Type";
+filelisting_6586114_tbl_info[3]["type"] = "string";
+filelisting_6586114_tbl_info[4] = new Array();
+filelisting_6586114_tbl_info[4]["name"] = "Download";
+filelisting_6586114_tbl_info[4]["type"] = "string";
+var filelisting_6586114_tbl = new Object;
+filelisting_6586114_tbl.name = 'filelisting_6586114_tbl';
+filelisting_6586114_tbl.info = filelisting_6586114_tbl_info;
+var Assm = new Object;
+Assm.name = 'Assm';
+Assm.postRenderings = new Array();
+</script>
+</head>
+<body onload="">
+
+<table>
+<tr>
+<td valign=top class=td0_x align=left ><B><h2> Exam 2 Practical </h2></B></td></tr>
+<tr>
+<td valign=top class=td0_x align=left > <h3>Corresponding to:  SSD3 Object-Oriented Programming and Design</h3></td></tr>
+</table>
+<hr><td width=5><br></td><a name="top_of_page"></a>
+
+
+<table><tr>
+<td width=5><br></td>  <td valign=top class=td0_x align=left > <!-- new pg 042903 ici -->
+
+<h2 align="center"><cite>Media Database</cite></h2>
+
+<h3>Outcomes</h3>
+    
+<blockquote> By successfully completing this question, you will demonstrate mastery
+   of the following: 
+  <ul>
+    <li> Implementing classes that include: 
+      <ul>
+        <li>Constructors</li>
+        <li>Accessors</li>
+        <li>Mutators</li>
+        <li>The method <code>equals</code></li>
+        <li>The method <code>toString</code></li>
+      </ul>
+    <li>Implementing classes that contain collections
+    <li>Implementing collections using vectors and iterators
+    <li>Implementing classes that use arrays
+<li>Knowledge of interfaces
+    <li>Knowledge of Javadoc
+  </ul>
+</blockquote>
+<h3>Background </h3>
+<p>For this question, you will create a media database of images and audio recordings. The 
+  implementation will consist of three classes and one interface. Because of time 
+  constraints, one of the classes is provided in the student archive. </p>
+<h3>Description</h3>
+
+<p> The following class diagram shows the elements you will use to  implement
+  the media database. The database will  contain two types of media files:
+  image files and audio files. You will not need to implement the class <code>ImageFile</code>;
+  that class is provided in the student archive.</p>
+
+<blockquote>
+<table border="0" width="75%" cellpadding="2" cellspacing="2">
+  <tr>
+      <td><img height="470" width="584" alt="Figure 1 Media database class diagram" src="pictures\uml-media-database.jpg"></td>
+  </tr>
+  <tr>
+      <td><strong>Figure 1</strong> <em>Media database class diagram</em></td>
+  </tr>
+</table>
+</blockquote>
+
+<p>In this exam, you will implement the following:</p>
+<ul>
+  <li>Interface <code>MediaFile</code></li>
+  <li>Class <code>AudioFile</code></li>
+  <li>Class <code>MediaDatabase</code></li>
+</ul>
+<p>The interface and class specifications are as follows:</p>
+<h4>Interface <code>MediaFile</code></h4>
+<p>The interface <code>MediaFile</code> declares the method that classes <code>ImageFile</code> and <code>AudioFile</code> must
+  implement.</p>
+<p><em>Method:</em></p>
+<ul>
+  <li> <code><em>String getName()</em></code>. Returns the name of the media file.</li>
+</ul>
+<h4>Class <code>AudioFile</code></h4>
+<p>The class <code>AudioFile</code> models an audio recording.</p>
+<p><em>Instance variables:</em></p>
+<ul>
+  <li><code><em>name</em></code>. A string with the name of the audio file</li>
+  <li><code><em>duration</em></code>. An integer with the duration of the audio 
+    file in seconds</li>
+</ul>
+<p><em>Constructor and methods:</em></p>
+<ul>
+  <li> <code><em>public AudioFile(String initialName, int initialDuration)</em></code>. 
+    Constructor that initializes the instance variables <code>name</code> and 
+    <code>duration</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public String getName()</em></code>. Returns the value of instance 
+    variable <code>name</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public int getDuration()</em></code>. Returns the value of instance 
+    variable <code>duration</code>.</li>
+</ul>
+<ul>
+  <li><code><em>public boolean equals(Object object)</em></code>. Overrides the 
+    method <code>equals</code> in the class <code>Object</code>. Two <code>AudioFile</code> 
+    objects are equal if their names are equal.</li>
+</ul>
+<ul>
+  <li><code><em>public String toString()</em></code>. Overrides the method <code>toString</code> 
+    in the class <code>Object</code>. Returns the string representation of an 
+    <code>AudioFile</code> object. The string returned has the following format: 
+    <blockquote> 
+      <pre><em>name</em><em>,duration</em><em></em><em></em></pre>
+    </blockquote>
+    <p>The fields are separated by a comma ( , ). You can assume that the fields 
+      themselves do not contain any commas.</p>
+  </li>
+</ul>
+<h4>Class <code>MediaDatabase</code></h4>
+<p>The class <code>MediaDatabase</code> maintains a collection of <code>MediaFile</code> objects.
+  A <code>MediaFile</code> object is an instance of a class that implements the
+  interface <code>MediaFile</code>.</p>
+<p><em>Instance variable:</em></p>
+<ul>
+  <li><code><em>files</em></code>. A vector that contains references to <code>MediaFile</code> 
+    objects</li>
+</ul>
+<p><em>Constructor and methods:</em></p>
+<ul>
+  <li> <code><em>public MediaDatabase()</em></code>. Creates the vector <code>files</code>, 
+    which is initially empty.</li>
+</ul>
+<ul>
+  <li> <code><em>public void addFile(MediaFile mediaFile)</em></code>. Adds the 
+    specified media file to the end of the vector <code>files</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public void removeFile(MediaFile mediaFile)</em></code>. Removes 
+    the specified media file from the vector <code>items</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public Iterator getFilesIterator()</em></code>. Returns an iterator 
+    over the instances in the vector <code>files</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public MediaFile getFile(String name)</em></code>. Returns a 
+    reference to the <code></code> <code>MediaFile</code> object with the specified 
+    name. Returns <code>null</code> if there are no files in the database with 
+    the specified name.</li>
+</ul>
+<ul>
+  <li> <code><em>public int getNumberOfFiles()</em></code>. Returns the number 
+    of instances in the vector <code>files</code>.</li>
+</ul>
+<ul>
+  <li> <code><em>public String[] getFileNames()</em></code>. Returns an array containing the names of all the files stored in the  vector <code>files</code>.</li>
+</ul>
+<h4>Test driver classes</h4>
+<p>Complete implementations of the following test drivers are provided in the
+   student archive:</p>
+<ul>
+  <li>Class <code>TestMediaFile</code></li>
+  <li>Class <code>TestAudioFile</code> </li>
+  <li>Class <code>TestMediaDatabase</code> </li>
+</ul>
+<h3>Files</h3>
+The following  files are needed to complete this exam: 
+<ul>
+  <li> <cite><a href="student-filesExam2.zip"><code>student-files.zip</code></a></cite> 
+    &#151; Download this file. This archive contains the following:</li>
+  <ul>
+    <li><cite><code>ImageFile.class</code></cite>. A complete implementation</li>
+  </ul>
+  <ul>
+    <li><cite><code>TestMediaFile.java</code></cite>. A complete implementation 
+    </li>
+  </ul>
+  <ul>
+    <li><cite><code>TestAudioFile.java</code></cite>. A complete implementation 
+    </li>
+  </ul>
+  <ul>
+    <li><cite><code>TestMediaDatabase.java</code></cite>. A complete implementation 
+    </li>
+  </ul>
+</ul>
+
+
+<h3>Tasks</h3>
+
+
+  Implement interface <code>MediaFile</code> and classes <code>AudioFile</code> 
+and <code>MediaDatabase</code>. Document your code using Javadoc and follow Sun's 
+code conventions. The following steps will guide you through this exam. Work incrementally 
+and test each increment. Save often. 
+<ol>
+  <li><strong>First, </strong>extract the files by issuing the following
+     command at the command prompt:
+    <p><tt>C:\&gt;</tt><kbd>unzip student-files.zip</kbd> </p>
+  </li>
+</ol>
+
+<ol start="2">
+  <li><strong>Then</strong>, implement interface <code>MediaFile</code> from scratch.<strong> 
+    </strong>Use <code>TestMediaFile</code> to test your implementation.</li>
+</ol>
+<ol start="3">
+  <li><strong>Then</strong>, implement class <code>AudioFile</code> from scratch.<strong> 
+    </strong>Use <code>TestAudioFile</code> to test your implementation.</li>
+</ol>
+<ol start="5">
+  <li><strong>Finally</strong>, implement class <code>MediaDatabase</code> from 
+    scratch. Use <code>TestMediaDatabase</code> to test your implementation.</li>
+</ol>
+
+<h3>Submission</h3>
+<p>Upon completion, submit <strong>only</strong> the following:</p>
+<ol>
+  <li><code><cite>MediaFile.java</cite></code></li>
+  <li><code><cite>AudioFile.java</cite></code></li>
+  <li><code><cite>MediaDatabase.java</cite></code></li>
+</ol>
+ </td>
+<table><tr>
+<td width=5><br></td>  <td class=td0_copyright  align=left valign=top >
+     <span class=copyright ><br>&#169; Copyright 2004 iCarnegie, Inc.  All rights reserved.</span></td>
+</tr></table>
+</form>
+
+</body></html>

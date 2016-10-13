@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<div style="text-align:center">
+		<button onclick="palyPause()">播放／暂停</button>
+		<button onclick="makeBig">big</button>
+		<button onclick="makeNormal">normal</button>
+		<button onclick="makeSmall()">small</button>
+		<br>
+		<video id="video1",width="420">
+			<source src="video/IMG_0055.mov" type="video/mov">
+			<source src="video/IMG_0055.mp4" type="video/mp4">
+		not support
+		</video>
+	</div>
+
+	<script>
+		var myVideo = document.getElementById("video1");
+
+		function playPause(){
+			if(myVideo.paused)
+				myVideo.play();
+			else
+				myVideo.pause();
+		}
+
+		function makeBig(){
+			myVideo.width="560";
+		}
+		function makeNormal(){
+			myVideo.width="420";
+		}
+
+		function makeSmall(){
+			myVideo.width="320";
+		}
+	</script>
+
+	</body>
+</html>
+
